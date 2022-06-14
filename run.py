@@ -236,3 +236,20 @@ def how_to():
     print(colors.WHITE + '   \nThe matrix determinant is: -201')
     print('=' * 90)
     logged_in_menu()
+
+def logged_in_menu():
+    """
+    Call the matrix building function or return to the main screen.
+    """
+    print('\n\nSelect one of the following options:')
+    print("\n1 - start")
+    print("2 - return to the main screen")
+    logged_input = input()
+    if logged_input == "1":
+        build()
+    elif logged_input == "2":
+        clear_console()
+        welcome()
+    else:
+        print(f"\nYou entered: {logged_input}. Please enter 1 or 2.")
+        logged_in_menu()
