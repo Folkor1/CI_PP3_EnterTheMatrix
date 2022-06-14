@@ -17,9 +17,12 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Enter_the_Matrix')
 
+
 class colors:
+
     GREEN = '\033[92m'
     WHITE = '\033[97m'
+
 
 def welcome():
     """
@@ -27,7 +30,8 @@ def welcome():
     """
     print("\n\n")
     print("=" * 70)
-    print("Hello and welcome to this very useful matrix determinant finder tool!")
+    print("Hello and welcome to this very")
+    ("useful matrix determinant finder tool!")
     print("=" * 70)
     print("\n                               Enter the")
     print(colors.GREEN + "              __  __           _            _        ")
@@ -40,6 +44,7 @@ def welcome():
     print("")
     print("=" * 70)
     start_menu()
+
 
 def start_menu():
     """
@@ -59,6 +64,7 @@ def start_menu():
     else:
         print(f"\nYou entered: {start_input}. Please enter 1 or 2.")
         start_menu()
+
 
 def create_user():
     """
@@ -80,6 +86,7 @@ def create_user():
         login.update_cell(up, 1, new_user)
         new_pass()
 
+
 def purge():
     """
     Purge the username cell if password is missing for it.
@@ -98,6 +105,7 @@ def purge():
     if last_login_n != last_pass_n:
         login.update_cell(last_login_n, 1, "")
 
+
 def new_pass():
     """
     Create a password once username is created.
@@ -111,6 +119,7 @@ def new_pass():
     clear_console()
     print('\n\nCredentials sucessfully created!')
     creds_created()
+
 
 def creds_created():
     """
@@ -129,6 +138,7 @@ def creds_created():
     else:
         print(f"\nYou entered: {creds_create}. Please enter 1 or 2.")
         creds_created()
+
 
 def retry_new_user():
     """
@@ -149,6 +159,7 @@ def retry_new_user():
     else:
         print(f"\nYou entered: {retry_new_name_input}. Please enter 1 or 2.")
         retry_new_user()
+
 
 def login_user():
     """
@@ -179,6 +190,7 @@ def login_user():
         except ValueError():
             print('Invalid data. Please try again.')
 
+
 def retry_name():
     """
     Retry login if login is incorrect,
@@ -197,6 +209,7 @@ def retry_name():
     else:
         print(f"\nYou entered: {retry_name_input}. Please enter 1 or 2.")
         retry_name()
+
 
 def retry_pass():
     """
@@ -217,11 +230,13 @@ def retry_pass():
         print(f"\nYou entered: {retry_pass_input}. Please enter 1 or 2.")
         retry_pass()
 
+
 def clear_console():
     """
     Clear the console.
     """
     clear = os.system('clear')
+
 
 def how_to():
     """
@@ -241,6 +256,7 @@ def how_to():
     print('=' * 90)
     logged_in_menu()
 
+
 def logged_in_menu():
     """
     Call the matrix building function or return to the main screen.
@@ -258,11 +274,12 @@ def logged_in_menu():
         print(f"\nYou entered: {logged_input}. Please enter 1 or 2.")
         logged_in_menu()
 
+
 def build():
     """
     Get the matrix input then calculate and display
     the determinant.
-    """      
+    """
     build_matrix = start()
     clear_console()
     print("\n\n" + "=" * 32)
@@ -283,6 +300,7 @@ def build():
     print("=" * 32)
     try_again()
 
+
 def try_again():
     """
     Build another matrix or return to the main screen.
@@ -300,6 +318,7 @@ def try_again():
     else:
         print(f"\nYou entered: {try_again_input}. Please enter 1 or 2.")
         try_again()
+
 
 def start():
     """
@@ -325,6 +344,7 @@ def start():
                     if len(matrix) == len(matrix_data):
                         return matrix
 
+
 def validate_first_input(values):
     """
     Validate the first input, whether 2, 3 or 4 numbers are entered.
@@ -338,6 +358,7 @@ def validate_first_input(values):
     except ValueError as e:
         print(f"{e}. Please try again.")
         return False
+
 
 def validate_next(value1, value2):
     """
@@ -353,5 +374,6 @@ def validate_next(value1, value2):
     except ValueError as e:
         print(f"{e}. Please try again.")
         return False
+
 
 welcome()
