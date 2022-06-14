@@ -35,3 +35,23 @@ def welcome():
     print("=" * 70)
     print("")
     print("=" * 70)
+    start_menu()
+
+def start_menu():
+    """
+    Create username or login.
+    """
+    print('\n\nSelect one of the following options:')
+    print("\n1 - create username")
+    print("2 - login")
+    start_input = input()
+    if start_input == "1":
+        clear_console()
+        print("\n\nLoading...\n\n")
+        create_user()
+    elif start_input == "2":
+        clear_console()
+        login_user()
+    else:
+        print(f"\nYou entered: {start_input}. Please enter 1 or 2.")
+        start_menu()
