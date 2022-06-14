@@ -212,3 +212,9 @@ def retry_pass():
     else:
         print(f"\nYou entered: {retry_pass_input}. Please enter 1 or 2.")
         retry_pass()
+
+def clear_console():
+    """
+    Clear the console.
+    """
+    clear = os.system('clear')
