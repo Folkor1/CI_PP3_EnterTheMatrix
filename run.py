@@ -2,6 +2,10 @@ import gspread
 import os
 from google.oauth2.service_account import Credentials
 
+from matrix import Matrix_2x2
+from matrix import Matrix_3x3
+from matrix import Matrix_4x4
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
