@@ -55,3 +55,24 @@ def start_menu():
     else:
         print(f"\nYou entered: {start_input}. Please enter 1 or 2.")
         start_menu()
+
+def create_user():
+    """
+    Validate the username input.
+    """
+    purge()
+    print("Done!\n\n")
+    login = SHEET.worksheet('login')
+    login_col = login.col_values(1)
+    new_user = input("Please type in a new username: ")
+    if new_user in login_col:
+        clear_console()
+        print("\n\nUsername already exist. Please enter another one.\n")
+        retry_new_user()
+    else:
+        print("\nUsername available.\n")
+        free_cell = list(filter(None, login_col))
+        up = str(len(free_cell) + 1)
+        login.update_cell(up, 1, new_user)
+        new_pass()
+
