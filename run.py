@@ -94,3 +94,16 @@ def purge():
     if last_login_n != last_pass_n:
         login.update_cell(last_login_n, 1, "")
 
+def new_pass():
+    """
+    Create a password once username is created.
+    """
+    password = SHEET.worksheet('pass')
+    pass_col = password.col_values(1)
+    newpass = input("Please type in a new password: ")
+    free_cell = list(filter(None, pass_col))
+    up = str(len(free_cell) + 1)
+    password.update_cell(up, 1, newpass)
+    clear_console()
+    print('\n\nCredentials sucessfully created!')
+    creds_created()
