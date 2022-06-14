@@ -253,3 +253,28 @@ def logged_in_menu():
     else:
         print(f"\nYou entered: {logged_input}. Please enter 1 or 2.")
         logged_in_menu()
+
+def build():
+    """
+    Get the matrix input then calculate and display
+    the determinant.
+    """      
+    build_matrix = start()
+    clear_console()
+    print("\n\n" + "=" * 32)
+    print(f"Here is your {len(build_matrix)}x{len(build_matrix)} matrix:\n")
+    for i in range(len(build_matrix)):
+        print(colors.GREEN + "      " + build_matrix[i].replace("[", "").replace("'", "").replace(",", "   ").replace("]", ""))
+    array = str(build_matrix).replace("[", "").replace("'", "").replace("]", "")
+    array = tuple(map(int, array.split(',')))
+    if len(array) == 4:
+        calc_2x2 = Matrix_2x2(*array)
+        print(colors.WHITE + f'\nThe matrix determinant is: {calc_2x2.determinant_2x2()}')
+    if len(array) == 9:
+        calc_3x3 = Matrix_3x3(*array)
+        print(colors.WHITE + f'\nThe matrix determinant is: {calc_3x3.determinant_3x3()}')
+    if len(array) == 16:
+        calc_4x4 = Matrix_4x4(*array)
+        print(colors.WHITE + f'\nThe matrix determinant is: {calc_4x4.determinant_4x4()}')
+    print("=" * 32)
+    try_again()
