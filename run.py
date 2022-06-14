@@ -218,3 +218,21 @@ def clear_console():
     Clear the console.
     """
     clear = os.system('clear')
+
+def how_to():
+    """
+    Show 'How to' text and the logged-in menu.
+    """
+    print('=' * 90)
+    print('\nHow to:')
+    print('\nEnter 2, 3 or 4 numbers, separated by comma.')
+    print('\nDepending on your input, the programm will request next batch of numbers - 2, 3 or 4.')
+    print('\nFor example, if you entered 3, then the program will request 3 more numbers 2 more times.')
+    print('\nThen the program will return the matrix and its determinant.')
+    print('\nExample:\n')
+    print(colors.GREEN + '   3   4   5')
+    print(colors.GREEN + '   0   8   1')
+    print(colors.GREEN + '   9   7   6')
+    print(colors.WHITE + '   \nThe matrix determinant is: -201')
+    print('=' * 90)
+    logged_in_menu()
