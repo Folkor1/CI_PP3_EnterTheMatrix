@@ -125,3 +125,23 @@ def creds_created():
     else:
         print(f"\nYou entered: {creds_create}. Please enter 1 or 2.")
         creds_created()
+
+def retry_new_user():
+    """
+    Retry creating new username or
+    return to the main screen.
+    """
+    print('\n\nSelect one of the following options:')
+    print("\n1 - retry new username")
+    print("2 - return to the main screen")
+    retry_new_name_input = input()
+    if retry_new_name_input == "1":
+        clear_console()
+        print("\n\nLoading...\n\n")
+        create_user()
+    elif retry_new_name_input == "2":
+        clear_console()
+        welcome()
+    else:
+        print(f"\nYou entered: {retry_new_name_input}. Please enter 1 or 2.")
+        retry_new_user()
