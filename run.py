@@ -174,3 +174,22 @@ def login_user():
             return
         except ValueError():
             print('Invalid data. Please try again.')
+
+def retry_name():
+    """
+    Retry login if login is incorrect,
+    or return to the main screen.
+    """
+    print('\n\nSelect one of the following options:')
+    print("\n1 - retry login")
+    print("2 - return to the main screen")
+    retry_name_input = input()
+    if retry_name_input == "1":
+        clear_console()
+        login_user()
+    elif retry_name_input == "2":
+        clear_console()
+        welcome()
+    else:
+        print(f"\nYou entered: {retry_name_input}. Please enter 1 or 2.")
+        retry_name()
