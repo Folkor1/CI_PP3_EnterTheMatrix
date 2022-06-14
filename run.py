@@ -76,3 +76,21 @@ def create_user():
         login.update_cell(up, 1, new_user)
         new_pass()
 
+def purge():
+    """
+    Purge the username cell if password is missing for it.
+    """
+    login = SHEET.worksheet('login')
+    password = SHEET.worksheet('pass')
+    login_col = login.col_values(1)
+    pass_col = password.col_values(1)
+
+    last_login = list(filter(None, login_col))
+    last_login_n = str(len(last_login))
+
+    last_pass = list(filter(None, pass_col))
+    last_pass_n = str(len(last_pass))
+
+    if last_login_n != last_pass_n:
+        login.update_cell(last_login_n, 1, "")
+
