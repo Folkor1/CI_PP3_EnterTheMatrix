@@ -296,3 +296,27 @@ def try_again():
     else:
         print(f"\nYou entered: {try_again_input}. Please enter 1 or 2.")
         try_again()
+
+def start():
+    """
+    Get the list of numbers depending on the first input,
+    i.e. amount of numbers entered in each input should match.
+    """
+    clear_console()
+    print('\n\nStarting...')
+    print('\nReady!')
+    matrix = []
+    while True:
+        print('\nEnter 2, 3 or 4 numbers, separated by comma:')
+        matrix_input = input()
+        matrix_data = matrix_input.split(',')
+        if validate_first_input(matrix_data):
+            matrix.append(matrix_input)
+            while True:
+                print(f"\nEnter another {len(matrix_data)} numbers:")
+                next_input = input()
+                next_data = next_input.split(',')
+                if validate_next(matrix_data, next_data):
+                    matrix.append(next_input)
+                    if len(matrix) == len(matrix_data):
+                        return matrix
