@@ -10,3 +10,14 @@ class Matrix:
     
     def calc_2x2(self):
         return self.num1 * self.num4 - self.num2 * self.num3
+
+class Matrix_2x2(Matrix):
+    """
+    2x2 matrix class,
+    returns 2x2 matrix determinant.
+    """
+    def __init__(self, num1, num2, num3, num4):
+        super().__init__(num1, num2, num3, num4)
+    
+    def determinant_2x2(self):
+        return f'{super().calc_2x2()}'
