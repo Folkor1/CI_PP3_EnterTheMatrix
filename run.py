@@ -278,3 +278,21 @@ def build():
         print(colors.WHITE + f'\nThe matrix determinant is: {calc_4x4.determinant_4x4()}')
     print("=" * 32)
     try_again()
+
+def try_again():
+    """
+    Build another matrix or return to the main screen.
+    """
+    print('\n\nSelect one of the following options:')
+    print("\n1 - try again")
+    print("2 - return to the main screen")
+    try_again_input = input()
+    if try_again_input == "1":
+        clear_console()
+        build()
+    elif try_again_input == "2":
+        clear_console()
+        welcome()
+    else:
+        print(f"\nYou entered: {try_again_input}. Please enter 1 or 2.")
+        try_again()
