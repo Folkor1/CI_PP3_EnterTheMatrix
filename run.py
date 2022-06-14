@@ -193,3 +193,22 @@ def retry_name():
     else:
         print(f"\nYou entered: {retry_name_input}. Please enter 1 or 2.")
         retry_name()
+
+def retry_pass():
+    """
+    Retry login if password is incorrect,
+    or return to the main screen.
+    """
+    print('\n\nSelect one of the following options:')
+    print("\n1 - retry login")
+    print("2 - return to the main screen")
+    retry_pass_input = input()
+    if retry_pass_input == "1":
+        clear_console()
+        login_user()
+    elif retry_pass_input == "2":
+        clear_console()
+        welcome()
+    else:
+        print(f"\nYou entered: {retry_pass_input}. Please enter 1 or 2.")
+        retry_pass()
