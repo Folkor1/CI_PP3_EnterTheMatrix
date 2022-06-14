@@ -320,3 +320,17 @@ def start():
                     matrix.append(next_input)
                     if len(matrix) == len(matrix_data):
                         return matrix
+
+def validate_first_input(values):
+    """
+    Validate the first input, whether 2, 3 or 4 numbers are entered.
+    """
+    try:
+        [int(value) for value in values]
+        if len(values) not in range(2, 5):
+            print(f"\nNeed to enter 2, 3 or 4 numbers. You entered: {len(values)}")
+        else:
+            return True
+    except ValueError as e:
+        print(f"{e}. Please try again.")
+        return False
