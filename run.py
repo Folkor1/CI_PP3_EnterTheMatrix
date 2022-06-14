@@ -28,17 +28,19 @@ def welcome():
     """
     Welcome message.
     """
+    text_a = "Hello and welcome to this"
+    text_b = "very useful matrix determinant finder tool!"
+    text_c = "             "
     print("\n\n")
     print("=" * 70)
-    print("Hello and welcome to this very")
-    ("useful matrix determinant finder tool!")
+    print(text_a + text_b)
     print("=" * 70)
-    print("\n                               Enter the")
-    print(colors.GREEN + "              __  __           _            _        ")
-    print(colors.GREEN + "             |  \/  |   __ _  | |_   _ __  (_) __  __")
-    print(colors.GREEN + "             | |\/| |  / _` | | __| | '__| | | \ \/ /")
-    print(colors.GREEN + "             | |  | | | (_| | | |_  | |    | |  >  < ")
-    print(colors.GREEN + "             |_|  |_|  \__,_|  \__| |_|    |_| /_/\_\ ")
+    print("\n                              Enter the")
+    print(colors.GREEN + text_c + " __  __           _            _        ")
+    print(colors.GREEN + text_c + "|  \/  |   __ _  | |_   _ __  (_) __  __")
+    print(colors.GREEN + text_c + "| |\/| |  / _` | | __| | '__| | | \ \/ /")
+    print(colors.GREEN + text_c + "| |  | | | (_| | | |_  | |    | |  >  < ")
+    print(colors.GREEN + text_c + "|_|  |_|  \__,_|  \__| |_|    |_| /_/\_\ ")
     print(colors.WHITE + " ")
     print("=" * 70)
     print("")
@@ -242,11 +244,15 @@ def how_to():
     """
     Show 'How to' text and the logged-in menu.
     """
+    text_a = '\nDepending on your input, the programm will'
+    text_b = 'request next batch of numbers - 2, 3 or 4.'
+    text_c = '\nFor example, if you entered 3, then the program'
+    text_d = 'will request 3 more numbers 2 more times.'
     print('=' * 90)
     print('\nHow to:')
     print('\nEnter 2, 3 or 4 numbers, separated by comma.')
-    print('\nDepending on your input, the programm will request next batch of numbers - 2, 3 or 4.')
-    print('\nFor example, if you entered 3, then the program will request 3 more numbers 2 more times.')
+    print(text_a + text_b)
+    print(text_c + text_d)
     print('\nThen the program will return the matrix and its determinant.')
     print('\nExample:\n')
     print(colors.GREEN + '   3   4   5')
@@ -280,23 +286,24 @@ def build():
     Get the matrix input then calculate and display
     the determinant.
     """
-    build_matrix = start()
+    buildm = start()
     clear_console()
     print("\n\n" + "=" * 32)
-    print(f"Here is your {len(build_matrix)}x{len(build_matrix)} matrix:\n")
-    for i in range(len(build_matrix)):
-        print(colors.GREEN + "      " + build_matrix[i].replace("[", "").replace("'", "").replace(",", "   ").replace("]", ""))
-    array = str(build_matrix).replace("[", "").replace("'", "").replace("]", "")
+    print(f"Here is your {len(buildm)}x{len(buildm)} matrix:\n")
+    for i in range(len(buildm)):
+        print(colors.GREEN + "      " + buildm[i].replace(",", "  "))
+    array = str(buildm).replace("[", "").replace("'", "").replace("]", "")
     array = tuple(map(int, array.split(',')))
+    text = "\nThe matrix determinant is: "
     if len(array) == 4:
         calc_2x2 = Matrix_2x2(*array)
-        print(colors.WHITE + f'\nThe matrix determinant is: {calc_2x2.determinant_2x2()}')
+        print(colors.WHITE + text + f'{calc_2x2.determinant_2x2()}')
     if len(array) == 9:
         calc_3x3 = Matrix_3x3(*array)
-        print(colors.WHITE + f'\nThe matrix determinant is: {calc_3x3.determinant_3x3()}')
+        print(colors.WHITE + text + f'{calc_3x3.determinant_3x3()}')
     if len(array) == 16:
         calc_4x4 = Matrix_4x4(*array)
-        print(colors.WHITE + f'\nThe matrix determinant is: {calc_4x4.determinant_4x4()}')
+        print(colors.WHITE + text + f'{calc_4x4.determinant_4x4()}')
     print("=" * 32)
     try_again()
 
@@ -352,7 +359,7 @@ def validate_first_input(values):
     try:
         [int(value) for value in values]
         if len(values) not in range(2, 5):
-            print(f"\nNeed to enter 2, 3 or 4 numbers. You entered: {len(values)}")
+            print(f"\nPlease enter 2, 3 or 4 only. You entered: {len(values)}")
         else:
             return True
     except ValueError as e:
@@ -368,7 +375,8 @@ def validate_next(value1, value2):
         [int(val1) for val1 in value1]
         [int(val2) for val2 in value2]
         if len(value1) != len(value2):
-            print(f"\nNeed to enter {len(value1)} numbers. You entered: {len(value2)}")
+            val2 = (f"You entered: {len(value2)}")
+            print(f"\nPlease enter {len(value1)} numbers. " + val2)
         else:
             return True
     except ValueError as e:
