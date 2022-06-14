@@ -334,3 +334,20 @@ def validate_first_input(values):
     except ValueError as e:
         print(f"{e}. Please try again.")
         return False
+
+def validate_next(value1, value2):
+    """
+    Validate next after the first inputs.
+    """
+    try:
+        [int(val1) for val1 in value1]
+        [int(val2) for val2 in value2]
+        if len(value1) != len(value2):
+            print(f"\nNeed to enter {len(value1)} numbers. You entered: {len(value2)}")
+        else:
+            return True
+    except ValueError as e:
+        print(f"{e}. Please try again.")
+        return False
+
+welcome()
