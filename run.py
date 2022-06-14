@@ -145,3 +145,32 @@ def retry_new_user():
     else:
         print(f"\nYou entered: {retry_new_name_input}. Please enter 1 or 2.")
         retry_new_user()
+
+def login_user():
+    """
+    Display the login message and validate the user/password input.
+    """
+    login_input = input('\nType in the username: ')
+    login = SHEET.worksheet('login')
+    password = SHEET.worksheet('pass')
+    login_col = login.col_values(1)
+    while True:
+        try:
+            if login_input not in login_col:
+                print(f'No such user "{login_input}" exists.')
+                retry_name()
+            else:
+                print('Username correct.\n')
+                login_cell = login.find(login_input)
+                pass_input = input('Type in password: ')
+                pass_cell = password.cell(login_cell.row, 1).value
+                if pass_input != pass_cell:
+                    print('\nIncorrect password.\n')
+                    retry_pass()
+                else:
+                    clear_console()
+                    print('\nLogin successful!\n\n')
+                    how_to()
+            return
+        except ValueError():
+            print('Invalid data. Please try again.')
