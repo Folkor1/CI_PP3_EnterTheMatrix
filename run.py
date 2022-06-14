@@ -107,3 +107,21 @@ def new_pass():
     clear_console()
     print('\n\nCredentials sucessfully created!')
     creds_created()
+
+def creds_created():
+    """
+    Navigate to login or to the main screen.
+    """
+    print('\n\nSelect one of the following options:')
+    print("\n1 - login")
+    print("2 - return to the main screen")
+    creds_create = input()
+    if creds_create == "1":
+        clear_console()
+        login_user()
+    if creds_create == "2":
+        clear_console()
+        welcome()
+    else:
+        print(f"\nYou entered: {creds_create}. Please enter 1 or 2.")
+        creds_created()
