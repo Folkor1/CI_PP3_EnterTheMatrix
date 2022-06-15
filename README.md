@@ -167,3 +167,142 @@ The following flowchart represents the matrix input and calculation program logi
 
 </details>
 
+## Technologies Used
+
+### Languages
+
+- [Python](https://www.python.org/) as the programming language
+
+### Frameworks & Tools
+
+- [GitHub](https://github.com/) as a repository for the project code
+- [Google Cloud Platform](https://console.cloud.google.com/) to access and manipulate data on spreadsheets
+- [Google Sheets](https://docs.google.com/) to store the authentification details
+- [PEP8](http://pep8online.com/) to validate the code
+- [Heroku](https://www.heroku.com/) to deploy the project
+
+### Libraries
+
+- [gspread](https://docs.gspread.org/) to manipulate the data on spreadsheet
+- [unittest](https://docs.python.org/3/library/unittest.html) to create unit tests for matrix calculations
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) to create json authentification file
+- os - to clear the console
+
+## Features
+
+### Main screen
+
+- Welcome message is displayed.
+- 2 options to select from:
+  - create username
+  - login
+<details><summary>Show main screen screenshot</summary>
+
+![Main screen screenshot](assets/docs/Logo.PNG)
+
+</details>
+
+### Create a new username
+
+- A new username input is displayed.
+
+<details><summary>Show new username creation screenshot</summary>
+
+![Create a new username](assets/docs/newUser.PNG)
+
+</details>
+
+### Existing username login
+
+- Existing username input is displayed.
+
+<details><summary>Show existing username login screenshot</summary>
+
+![Existing username login](assets/docs/existingUser.PNG)
+
+</details>
+
+### Instructions
+
+- Instructions of how to use the program are displayed.
+- 2 options to select from:
+  - start
+  - return to the main screen
+
+<details><summary>Show instructions screenshot 1</summary>
+
+![Instructions 1](assets/docs/instructions1.PNG)
+
+</details>
+
+<details><summary>Show instructions screenshot 2</summary>
+
+![Instructions 2](assets/docs/instructions2.PNG)
+
+</details>
+
+### Enter the numbers
+
+- A message suggesting to enter 2, 3 or 4 numbers is displayed.
+
+<details><summary>Show enter the number screenshot</summary>
+
+![Enter the number](assets/docs/enterTheNum.PNG)
+
+</details>
+
+### Results
+
+- Matrix and its determinant are displayed.
+- 2 options to select from:
+  - try again
+  - return to the main screen
+
+<details><summary>Show results screenshot</summary>
+
+![Results](assets/docs/results.PNG)
+
+</details>
+
+### User Input Validation
+
+- An error message is displayed when incorrect symbol is entered in 1-2 menu selections.
+
+<details><summary>Show the error screenshot</summary>
+
+![1-2 error](assets/docs/1-2.PNG)
+
+</details>
+
+- An error message is displayed when the number lines are entered in incorrect format.
+
+<details><summary>Show the error screenshot</summary>
+
+![Incorrect format](assets/docs/incorrectFormat.PNG)
+
+</details>
+
+<details><summary>Show the error screenshot</summary>
+
+![Incorrect format](assets/docs/errorFormat.PNG)
+
+</details>
+
+- An error message is shown when using incorrect user name on login.
+
+<details><summary>Show the error screenshot</summary>
+
+![Incorrect username](assets/docs/incorrectUser.PNG)
+
+</details>
+
+- Another error message is displayed when using existing username on username creation.
+
+<details><summary>Show the error screenshot</summary>
+
+![Existing username](assets/docs/errorExistUser.PNG)
+
+</details>
+
+## Testing
+
