@@ -17,5 +17,13 @@ class TestMatrix(unittest.TestCase):
         msg_3x3 = "Matrix 3x3 determinant caclulation is not correct!"
         self.assertEqual(calculation, determ_3x3, msg_3x3)
 
+    def test_matrix_4x4_input(self):
+        array = (7,5,0,1,2,8,5,3,8,0,2,3,6,5,8,2)
+        numbers = matrix.Matrix_4x4(*array)
+        calculation = numbers.determinant_4x4()
+        determ_4x4 = -1199
+        msg_4x4 = "Matrix 4x4 determinant caclulation is not correct!"
+        self.assertEqual(calculation, determ_4x4, msg_4x4)
+
 if __name__ == '__main__':
     unittest.main()
