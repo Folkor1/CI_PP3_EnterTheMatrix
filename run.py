@@ -31,7 +31,6 @@ def welcome():
     text_a = "Hello and welcome to this "
     text_b = "very useful matrix determinant finder tool!"
     text_c = "             "
-    print("\n\n")
     print("=" * 70)
     print(text_a + text_b)
     print("=" * 70)
@@ -186,7 +185,7 @@ def login_user():
                     retry_pass()
                 else:
                     clear_console()
-                    print('\nLogin successful!\n\n')
+                    print('Login successful!\n\n')
                     how_to()
             return
         except ValueError():
@@ -244,22 +243,20 @@ def how_to():
     """
     Show 'How to' text and the logged-in menu.
     """
-    text_a = '\nDepending on your input, the programm will '
-    text_b = 'request next batch of numbers - 2, 3 or 4.'
-    text_c = '\nFor example, if you entered 3, then the program '
-    text_d = 'will request 3 more numbers 2 more times.'
-    print('=' * 90)
+    print('=' * 80)
     print('\nHow to:')
     print('\nEnter 2, 3 or 4 numbers, separated by comma.')
-    print(text_a + text_b)
-    print(text_c + text_d)
+    print('\nDepending on your input, the programm will')
+    print('request next batch of numbers - 2, 3 or 4.')
+    print('\nFor example, if you entered 3, then the program ')
+    print('will request 3 more numbers 2 more times.')
     print('\nThen the program will return the matrix and its determinant.')
     print('\nExample:\n')
     print(colors.GREEN + '   3   4   5')
     print(colors.GREEN + '   0   8   1')
     print(colors.GREEN + '   9   7   6')
     print(colors.WHITE + '   \nThe matrix determinant is: -201')
-    print('=' * 90)
+    print('=' * 80)
     logged_in_menu()
 
 
