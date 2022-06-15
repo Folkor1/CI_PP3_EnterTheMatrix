@@ -69,8 +69,8 @@ The tool's objective is to help the user with math calculations of finding 2x2, 
 
 <details><summary>Click here to view instructions</summary>
 
-### Main Menu
-On the main menu screen the program logo is displayed, and the user will have 2 options here - create a new username or use an existing login information.
+### Main Screen
+On the main screen menu the program logo is displayed, and the user will have 2 options here - create a new username or use an existing login information.
 
 Options:
 - create username
@@ -82,7 +82,7 @@ First the user has an input line to enter a new username.
 Input name:
 - Please type in a new username
 
-If existing username is entered, then the program will notify the user about it and ask to enter another user name, or return to the main menu.
+If existing username is entered, then the program will notify the user about it and ask to enter another user name, or return to the main screen.
 
 Options:
 - retry new username
@@ -142,11 +142,13 @@ The the program will ask if user wishes to run the program again, or return to t
 
 ### Users
 
-1. As a user I want to have a functionality to create a new user name and password.
-2. I want to have an ability to use existing user name and password.
-3. I want to have a clear undestanding of what went wrong in the case of error.
-4. I want to have understandable, non-bulky instructions of use.
-5. I want to be able to easily navigate from any point of the program to the main menu.
+1. As a user I want to select to create a new user name or use the existing.
+2. I want to have a functionality to create a new user name and password.
+3. I want to have an ability to use existing user name and password.
+4. I want to have a clear undestanding of what went wrong in the case of error.
+5. I want to have understandable, non-bulky instructions of use.
+6. I want to be able to easily navigate from any point of the program to the main screen.
+
 6. I want to run the program and get the correct results based on my input.
 7. I want to have an ability to repeat the program multiple times without re-logging.
 
@@ -306,3 +308,60 @@ The following flowchart represents the matrix input and calculation program logi
 
 ## Testing
 
+The project was tested using 2 methods:
+- Manually
+- Unit testing
+
+### Manual Testing
+
+<details><summary>User stories testing</summary>
+
+1. As a user I want to select to create a new user name or use the existing.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Main screen | Select 'create username' | Navigate to new user creation screen | Works as expected |
+| Main screen | Select 'login' | Navigate to existing user login | Works as expected |
+| Main screen | Enter any symbol that is not 1 or 2 | Return error message | Works as expected |
+
+2. I want to have a functionality to create a new user name and password.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| New username | Enter existing username | Return error and show navigation options | Works as expected |
+| New username | Enter non-existing username | Navigate to password selection | Works as expected |
+| New username | Terminate the program without setting a password | The username entered will be deleted | Works as expected |
+| New username | Login using new username and password | Navigate to the instructions screen | Works as expected |
+| New username | Use incorrect login details | Return error and show navigation options  | Works as expected |
+
+3. I want to have an ability to use existing user name and password.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Existing username | Enter non-existing username | Return error and show navigation options | Works as expected |
+| Existing username | Enter existing username | Navigate to password selection | Works as expected |
+| Existing username | Enter incorrect password | Return error and show navigation options | Works as expected |
+| Existing username | Enter correct password | Navigate to the instructions screen | Works as expected |
+
+4. I want to have a clear undestanding of what went wrong in the case of error.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Generic | Enter any symbol that is not 1 or 2 in the 1-2 selection | Return the correct error and description | Works as expected |
+| Entering the matrix | Enter 3 numbers when 2 or 4 were requested | Return the correct error and description | Works as expected |
+| Entering the matrix | Enter any letter(s) | Return the correct error and description | Works as expected |
+
+5. I want to have understandable, non-bulky instructions of use.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Instructions | Navigate to instructions screen | All text is perfectly aligned and readable | Works as expected |
+
+6. I want to be able to easily navigate from any point of the program to the main screen.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Instructions | Navigate to instructions screen | All text is perfectly aligned and readable | Works as expected |
+
+
+</details>
