@@ -28,7 +28,7 @@ def welcome():
     """
     Welcome message.
     """
-    text_a = "Hello and welcome to this"
+    text_a = "Hello and welcome to this "
     text_b = "very useful matrix determinant finder tool!"
     text_c = "             "
     print("\n\n")
@@ -244,9 +244,9 @@ def how_to():
     """
     Show 'How to' text and the logged-in menu.
     """
-    text_a = '\nDepending on your input, the programm will'
+    text_a = '\nDepending on your input, the programm will '
     text_b = 'request next batch of numbers - 2, 3 or 4.'
-    text_c = '\nFor example, if you entered 3, then the program'
+    text_c = '\nFor example, if you entered 3, then the program '
     text_d = 'will request 3 more numbers 2 more times.'
     print('=' * 90)
     print('\nHow to:')
