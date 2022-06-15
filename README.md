@@ -135,3 +135,27 @@ The the program will ask if user wishes to run the program again, or return to t
 
 - try again
 - return to the main screen
+
+## User Stories
+
+### Users
+
+1. As a user I want to have a functionality to create a new user name and password.
+2. I want to have an ability to use existing user name and password.
+3. I want to have a clear undestanding of what went wrong in the case of error.
+4. I want to have understandable, non-bulky instructions of use.
+5. I want to be able to easily navigate from any point of the program to the main menu.
+6. I want to run the program and get the correct results based on my input.
+7. I want to have an ability to repeat the program multiple times without re-logging.
+
+### Site Owner
+
+1. As a site owner I want the users to have a perfect understanding of what the program do.
+2. I want the users to have positive experience.
+3. I want the users to avail from the program math functionality.
+
+## Technical Design
+
+### Flowchart
+
+
