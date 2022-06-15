@@ -76,7 +76,7 @@ def create_user():
     print("Done!\n\n")
     login = SHEET.worksheet('login')
     login_col = login.col_values(1)
-    new_user = input("Please type in a new username: ")
+    new_user = input("Please type in a new username:\n ")
     if new_user in login_col:
         clear_console()
         print("\n\nUsername already exist. Please enter another one.\n")
@@ -114,7 +114,7 @@ def new_pass():
     """
     password = SHEET.worksheet('pass')
     pass_col = password.col_values(1)
-    newpass = input("Please type in a new password: ")
+    newpass = input("Please type in a new password:\n ")
     free_cell = list(filter(None, pass_col))
     up = str(len(free_cell) + 1)
     password.update_cell(up, 1, newpass)
@@ -179,7 +179,7 @@ def login_user():
             else:
                 print('Username correct.\n')
                 login_cell = login.find(login_input)
-                pass_input = input('Type in password: ')
+                pass_input = input('Type in password:\n ')
                 pass_cell = password.cell(login_cell.row, 1).value
                 if pass_input != pass_cell:
                     print('\nIncorrect password.\n')
