@@ -68,3 +68,70 @@ The tool's objective is to help the user with math calculations of finding 2x2, 
 ### User Manual
 
 <details><summary>Click here to view instructions</summary>
+
+### Main Menu
+On the main menu screen the program logo is displayed, and the user will have 2 options here - create a new username or use an existing login information.
+
+Options:
+- create username
+- login
+
+### Create username
+First the user has an input line to enter a new username. 
+
+Input name:
+- Please type in a new username
+
+If existing username is entered, then the program will notify the user about it and ask to enter another user name, or return to the main menu.
+
+Options:
+- retry new username
+- return to the main screen
+
+Once the user name is created, the program will ask to enter a password. If the program will be terminated at this point, then the username will be purged from the data base on the next run.
+
+Input password:
+- Please type in a new password
+
+When user name and password are created, the user can either login or return to the main screen.
+
+Options:
+- login
+- return to the main screen
+
+### Login
+Login option can be used when the user has created the user name and password.
+
+Input:
+- Type in the username
+
+If the user name entered is incorrect, the program will notify the user and give 2 options:
+
+- retry login
+- return to the main screen
+
+In case if user name is entered correctly, then the user is asked to type in the password:
+
+- Type in password
+
+And if the password is entered incorrectly, the user will need to start authentication process from the beginning:
+
+- retry login
+- return to the main screen
+
+### Login successful
+When the user successfully logs in, the information window will be displayed with a brief description of how to use the program and the example. Apart from that there 2 options:
+
+- start
+- return to the main screen
+
+### Start
+Once the program started the user is advised to enter 2, 3 or 4 numbers, separated by comma. If the input is invalid, the corresponding error message will be returned.
+If 2 numbers are entered first, then the program will request another 2 numbers in the next input. As before, in case of incorrect input the error message will be returned. Same for 3 and 4 numbers.
+
+Once the final batch of numbers is entered, the program will process the overall input and return the matrix and calculate its determinant using the corresponding math formulas.
+
+The the program will ask if user wishes to run the program again, or return to the main screen:
+
+- try again
+- return to the main screen
