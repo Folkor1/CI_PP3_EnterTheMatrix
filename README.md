@@ -136,6 +136,8 @@ The the program will ask if user wishes to run the program again, or return to t
 - try again
 - return to the main screen
 
+</details>
+
 ## User Stories
 
 ### Users
@@ -157,5 +159,11 @@ The the program will ask if user wishes to run the program again, or return to t
 ## Technical Design
 
 ### Flowchart
+The following flowchart represents the matrix input and calculation program logic:
 
+<details><summary>Flowchart</summary>
+
+![Flowchart](assets/docs/Flowchart.jpeg)
+
+</details>
 
