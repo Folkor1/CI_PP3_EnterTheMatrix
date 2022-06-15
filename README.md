@@ -1,31 +1,70 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Enter The Matrix
 
-Welcome Folkor1,
+**Developer: Igor Vasiljev**
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[Link to the live project](https://type-the-matrix.herokuapp.com/)
 
-## Reminders
+![logo](assets/docs/Logo.PNG)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## About
 
-## Creating the Heroku app
+'Enter the Matrix' program accepts a user input of 2, 3 or 4 lines of numbers, then builds and returns the matrix and its determinant.
+The program also allows to create a unique user login and password.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+The tool's objective is to help the user with math calculations of finding 2x2, 3x3 or 4x4 matrix determinant.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Table of Contents
+  - [Project Goals](#project-goals)
+    - [User Goals](#user-goals)
+    - [Site Owner Goals](#site-owner-goals)
+  - [User Experience](#user-experience)
+    - [Target Audience](#target-audience)
+    - [User Requirements and Expectations](#user-requirements-and-expectations)
+    - [User Manual](#user-manual)
+  - [User Stories](#user-stories)
+    - [Users](#users)
+    - [Site Owner](#site-owner)
+  - [Technical Design](#technical-design)
+    - [Flowchart](#flowchart)
+  - [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks & Tools](#frameworks--tools)
+    - [Libraries](#libraries)
+  - [Features](#features)
+  - [Validation](#validation)
+  - [Testing](#testing)
+    - [Manual Testing](#manual-testing)
+    - [Automated Testing](#automated-testing)
+  - [Bugs](#bugs)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+  - [Acknowledgements](#acknowledgements)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Project Goals
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### User Goals
 
-Connect your GitHub repository and deploy as normal.
+- Ability to create an account.
+- Run math calculations and get the results.
 
-## Constraints
+### Site Owner Goals
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- Create a useful tool with clear and understandable objectives.
+- Easy to use, user friendly and intuitive navigation.
 
------
-Happy coding!
+## User Experience
+
+### Target Audience
+
+- Everyone who's aware of what matrices and their determinants are.
+
+### User Requirements and Expectations
+
+- Easy navigation.
+- Clear program responce to the user input.
+- Non-bulky texts.
+- Correct math results of the program.
+
+### User Manual
+
+<details><summary>Click here to view instructions</summary>
