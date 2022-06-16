@@ -188,7 +188,7 @@ The following flowchart represents the matrix input and calculation program logi
 
 ### Python Libraries
 
-- [unittest](https://docs.python.org/3/library/unittest.html)
+- [unittest](https://docs.python.org/3/library/unittest.html) was used for testing matrix determinant calculations
 - os - to clear the console
 
 #### Third Party Libraries
