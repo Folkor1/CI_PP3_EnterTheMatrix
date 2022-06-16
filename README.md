@@ -34,7 +34,7 @@ The tool's objective is to help the user with math calculations of finding 2x2, 
   - [Validation](#validation)
   - [Testing](#testing)
     - [Manual Testing](#manual-testing)
-    - [Automated Testing](#automated-testing)
+    - [Automation Testing](#automation-testing)
   - [Bugs](#bugs)
   - [Deployment](#deployment)
   - [Credits](#credits)
@@ -305,6 +305,28 @@ The following flowchart represents the matrix input and calculation program logi
 
 </details>
 
+## Validation
+
+[PEP8 online](http://pep8online.com/) was used to check the code for errors. Code passed the validation in all files.
+
+<details><summary>run.ry validation</summary>
+
+![run.py](assets/docs/PEP8-run.PNG)
+
+</details>
+
+<details><summary>matrix.ry validation</summary>
+
+![matrix.py](assets/docs/PEP8-matrix.PNG)
+
+</details>
+
+<details><summary>tests.ry validation</summary>
+
+![tests.py](assets/docs/PEP8-tests.PNG)
+
+</details>
+
 ## Testing
 
 The project was tested using 2 methods:
@@ -322,6 +344,12 @@ The project was tested using 2 methods:
 | Main screen | Select 'create username' | Navigate to new user creation screen | Works as expected |
 | Main screen | Select 'login' | Navigate to existing user login | Works as expected |
 | Main screen | Enter any symbol that is not 1 or 2 | Return the correct error message | Works as expected |
+
+<details><summary>tests.ry validation</summary>
+
+![tests.py](assets/docs/PEP8-tests.PNG)
+
+</details>
 
 2. I want to have a functionality to create a new user name and password.
 
@@ -424,4 +452,38 @@ The project was tested using 2 methods:
 | Unable to login if using an existing password | Function that is matching password against the username is amended |
 | Only login is added to the spreadsheet when terminating the program after new user name input | Function added to remove the username if there is no password for it |
 | New login and password were overriding the existing ones | Function that looks for the last empty row in the spreadsheet was fixed |
-|  |  |
+| Unexpected square brackets displayed in the matrix output | Added replace() method to the matrix output function |
+| Text issues decreasing readability | Line breaks added and removed overflowing equal signs |
+
+## Deployment
+
+### Heroku
+
+The project was deployed using Heroku by the following steps:
+
+1. Create or log in to your account at heroku.com
+2. Click 'New' -> 'Create new app'
+3. Type in the app name (current project name is 'type-in-matrix') -> select the region -> 'Create app'
+4. Navigate to 'Settings' tab
+5. Click 'Reveal Config Vars' -> Add 'CREDS' key -> paste the content of creds.json file to 'value field -> 'Add'
+6. Add one more config var with the key 'PORT' and value '8000'
+7. Then click 'Add buildpack' -> add 'python' -> add 'nodejs'
+8. Navigate to 'Deploy' tab
+9. Select 'GitHub' in the 'Deployment method' area
+10. Enter the GitHub repository name in the search bar -> 'Connect'
+11. Click 'Deploy Branch' and wait for it to be built
+
+### Making a Local Clone
+
+1. Navigate to the GitHub repository 
+2. Click the 'Code' button (next to the green 'Gitpod' button)
+3. Copy the HTTPS link
+4. Navigate to Git Bash -> working directory
+5. Type 'git clone' and paste the URL received in the step 3
+6. Press 'Enter
+
+## Credits
+
+- [Messletters text generator](https://www.messletters.com/en/) was used to create the program logo.
+- [gspread](https://docs.gspread.org/en/latest/index.html) was used to get an examples of module usage.
+- [Stack overflow](https://stackoverflow.com) was used to find answers related to the correct syntax use.
