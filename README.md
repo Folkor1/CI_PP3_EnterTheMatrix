@@ -50,7 +50,7 @@ The tool's objective is to help the user with math calculations of finding 2x2, 
 ### Site Owner Goals
 
 - Create a useful tool with clear and understandable objectives.
-- Easy to use, user friendly and intuitive navigation.
+- Easy to use, user-friendly and intuitive navigation.
 
 ## User Experience
 
@@ -61,7 +61,7 @@ The tool's objective is to help the user with math calculations of finding 2x2, 
 ### User Requirements and Expectations
 
 - Easy navigation.
-- Clear program responce to the user input.
+- Clear program response to the user input.
 - Non-bulky texts.
 - Correct math results of the program.
 
@@ -345,9 +345,21 @@ The project was tested using 2 methods:
 | Main screen | Select 'login' | Navigate to existing user login | Works as expected |
 | Main screen | Enter any symbol that is not 1 or 2 | Return the correct error message | Works as expected |
 
-<details><summary>tests.ry validation</summary>
+<details><summary>Screenshot 1</summary>
 
-![tests.py](assets/docs/PEP8-tests.PNG)
+![create username](assets/docs/1-1.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![login](assets/docs/2-2.png)
+
+</details>
+
+<details><summary>Screenshot 3</summary>
+
+![error](assets/docs/3-3.png)
 
 </details>
 
@@ -361,6 +373,30 @@ The project was tested using 2 methods:
 | New username | Login using new username and password | Navigate to the instructions screen | Works as expected |
 | New username | Use incorrect login details | Return error and show navigation options  | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+
+![Existing username](assets/docs/2-user_exist.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![Non-existing username](assets/docs/2-no_exist.png)
+
+</details>
+
+<details><summary>Screenshot 3</summary>
+
+![Successful login](assets/docs/2-login_new.png)
+
+</details>
+
+<details><summary>Screenshot 4</summary>
+
+![Wrong password](assets/docs/2-wrong_pass.png)
+
+</details>
+
 3. I want to have an ability to use existing user name and password.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
@@ -370,6 +406,30 @@ The project was tested using 2 methods:
 | Existing username | Enter incorrect password | Return error and show navigation options | Works as expected |
 | Existing username | Enter correct password | Navigate to the instructions screen | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+
+![Non-existing username](assets/docs/3-no_exist.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![Existing username](assets/docs/3-login_pass.png)
+
+</details>
+
+<details><summary>Screenshot 3</summary>
+
+![Incorrect password](assets/docs/3-wrong_pass.png)
+
+</details>
+
+<details><summary>Screenshot 4</summary>
+
+![Incorrect password](assets/docs/3-login.png)
+
+</details>
+
 4. I want to have a clear undestanding of what went wrong in the case of error.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
@@ -378,12 +438,42 @@ The project was tested using 2 methods:
 | Entering the matrix | Enter 3 numbers when 2 or 4 were requested | Return the correct error and description | Works as expected |
 | Entering the matrix | Enter any letter(s) | Return the correct error and description | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+
+![Incorrect input](assets/docs/4-wrong_input.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![Incorrect input](assets/docs/4-wrong_input2.png)
+
+</details>
+
+<details><summary>Screenshot 3</summary>
+
+![Incorrect input](assets/docs/4-wrong_input3.png)
+
+</details>
+
 5. I want to have understandable, non-bulky instructions of use.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Instructions | Navigate to instructions screen | All text is perfectly aligned and readable | Works as expected |
 | Results screen | Enter the numbers and get the results | All text is perfectly aligned and readable | Works as expected |
+
+<details><summary>Screenshot 1</summary>
+
+![Instructions](assets/docs/5-1.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![Instructions](assets/docs/5-2.png)
+
+</details>
 
 6. I want to be able to easily navigate from any point of the program to the main screen.
 
@@ -394,6 +484,30 @@ The project was tested using 2 methods:
 | Intructions | Navigate to instructions screen | There is an option to navigate to the main screen | Works as expected |
 | Results | Run the program and get to results screen | There is an option to navigate to the main screen | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+
+![Results](assets/docs/6-1.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![Incorrect username](assets/docs/6-2.png)
+
+</details>
+
+<details><summary>Screenshot 3</summary>
+
+![Incorrect password](assets/docs/6-3.png)
+
+</details>
+
+<details><summary>Screenshot 4</summary>
+
+![Instructions](assets/docs/6-4.png)
+
+</details>
+
 7. I want to run the program and get the correct results based on my input.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
@@ -401,11 +515,29 @@ The project was tested using 2 methods:
 | Start the matrix calculation | Enter 2,3 or 4 number lines | The program requests the correct amount of numbers | Works as expected |
 | Results | Enter 2,3 or 4 number lines | The program returns the correct determinant value | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+
+![Matrix calculation](assets/docs/7-1.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![Results](assets/docs/7-2.png)
+
+</details>
+
 8. I want to have an ability to repeat the program multiple times without re-logging.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Results | Use 'Try again' function | The matrix input function restarts | Works as expected |
+
+<details><summary>Screenshot 1</summary>
+
+![Results](assets/docs/8-1.png)
+
+</details>
 
 9. As a site owner I want the users to have a perfect understanding of what the program do.
 
@@ -414,6 +546,24 @@ The project was tested using 2 methods:
 | Main screen | Show informational messages | Clear description of the program functions | Works as expected |
 | Instructions | Show informational messages | Clear description of how to use the program | Works as expected |
 | Results | Show informational messages | Clear outcome of the user input | Works as expected |
+
+<details><summary>Screenshot 1</summary>
+
+![Main screen](assets/docs/9-1.png)
+
+</details>
+
+<details><summary>Screenshot 2</summary>
+
+![Instruction](assets/docs/9-2.png)
+
+</details>
+
+<details><summary>Screenshot 3</summary>
+
+![Instruction](assets/docs/9-3.png)
+
+</details>
 
 10. I want the login details saved to the spreadsheet.
 
@@ -432,6 +582,12 @@ The project was tested using 2 methods:
 | Create a new username | Enter non-existing username | The correct message is displayed and password is requested | Works as expected |
 | Create a new username | Enter a password | The correct navigation options are displayed | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+
+![Login](assets/docs/11-login.png)
+
+</details>
+
 </details>
 
 ### Automation Testing
@@ -441,6 +597,18 @@ The project was tested using 2 methods:
 1. Unit tests were written using 'unittest' library.
 2. Tests are designed to check matrix determinant calculations.
 3. assertEqual() method was used to make sure the results are returned as per input.
+
+<details><summary>Unit test pass scenario</summary>
+
+![Correct calculations](assets/docs/unittest-pass.PNG)
+
+</details>
+
+<details><summary>Unit test fail scenario</summary>
+
+![Incorrect calculations](assets/docs/unittest-fail.PNG)
+
+</details>
 
 </details>
 
