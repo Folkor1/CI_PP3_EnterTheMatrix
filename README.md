@@ -677,3 +677,7 @@ The project was deployed using Heroku by the following steps:
 - [Messletters text generator](https://www.messletters.com/en/) was used to create the program logo.
 - [gspread](https://docs.gspread.org/en/latest/index.html) was used to get an examples of module usage.
 - [Stack overflow](https://stackoverflow.com) was used to find answers related to the correct syntax use.
+
+## Acknowledgements
+Big thanks to everyone who trusted in me(if any) during the course of this project.
+A special thanks to my mentor Mo for support, guidance and very helpful feedback.
