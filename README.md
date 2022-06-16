@@ -186,12 +186,15 @@ The following flowchart represents the matrix input and calculation program logi
 - [PEP8](http://pep8online.com/) to validate the code
 - [Heroku](https://www.heroku.com/) to deploy the project
 
-### Libraries
+### Python Libraries
 
-- [gspread](https://docs.gspread.org/) to manipulate the data on spreadsheet
-- [unittest](https://docs.python.org/3/library/unittest.html) to create unit tests for matrix calculations
-- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) to create json authentification file
+- [unittest](https://docs.python.org/3/library/unittest.html)
 - os - to clear the console
+
+#### Third Party Libraries
+
+- [gspread](https://docs.gspread.org/) - Justification: gspread was used to manipulate data on the Google spreadsheet.
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) - Justification: Google OAuth was used to access Google API with the information generated in creds.json file. This information is also used in the deployment to Heroku.
 
 [Back to Table Of Contents](#table-of-contents)
 
