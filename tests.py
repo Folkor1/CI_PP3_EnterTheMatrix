@@ -4,7 +4,7 @@ import matrix
 
 class TestMatrix(unittest.TestCase):
     """
-    Validates the calculations in 2x2, 3x3 and 4x4 matrixes.
+    Validates the calculations in 2x2, 3x3 and 4x4 matrices.
     """
 
     def test_matrix_2x2_input(self):

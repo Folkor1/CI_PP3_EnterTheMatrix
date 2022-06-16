@@ -148,15 +148,14 @@ The the program will ask if user wishes to run the program again, or return to t
 4. I want to have a clear undestanding of what went wrong in the case of error.
 5. I want to have understandable, non-bulky instructions of use.
 6. I want to be able to easily navigate from any point of the program to the main screen.
-
-6. I want to run the program and get the correct results based on my input.
-7. I want to have an ability to repeat the program multiple times without re-logging.
+7. I want to run the program and get the correct results based on my input.
+8. I want to have an ability to repeat the program multiple times without re-logging.
 
 ### Site Owner
 
-1. As a site owner I want the users to have a perfect understanding of what the program do.
-2. I want the users to have positive experience.
-3. I want the users to avail from the program math functionality.
+9. As a site owner I want the users to have a perfect understanding of what the program do.
+10. I want the login details saved to the spreadsheet.
+11. I want the data is correctly validated and the correct results are returned.
 
 ## Technical Design
 
@@ -322,7 +321,7 @@ The project was tested using 2 methods:
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Main screen | Select 'create username' | Navigate to new user creation screen | Works as expected |
 | Main screen | Select 'login' | Navigate to existing user login | Works as expected |
-| Main screen | Enter any symbol that is not 1 or 2 | Return error message | Works as expected |
+| Main screen | Enter any symbol that is not 1 or 2 | Return the correct error message | Works as expected |
 
 2. I want to have a functionality to create a new user name and password.
 
@@ -356,12 +355,73 @@ The project was tested using 2 methods:
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Instructions | Navigate to instructions screen | All text is perfectly aligned and readable | Works as expected |
+| Results screen | Enter the numbers and get the results | All text is perfectly aligned and readable | Works as expected |
 
 6. I want to be able to easily navigate from any point of the program to the main screen.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Instructions | Navigate to instructions screen | All text is perfectly aligned and readable | Works as expected |
+| Incorrect user name | Enter an incorrect username | There is an option to navigate to the main screen | Works as expected |
+| Incorrect password | Enter an incorrect password | There is an option to navigate to the main screen | Works as expected |
+| Intructions | Navigate to instructions screen | There is an option to navigate to the main screen | Works as expected |
+| Results | Run the program and get to results screen | There is an option to navigate to the main screen | Works as expected |
 
+7. I want to run the program and get the correct results based on my input.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Start the matrix calculation | Enter 2,3 or 4 number lines | The program requests the correct amount of numbers | Works as expected |
+| Results | Enter 2,3 or 4 number lines | The program returns the correct determinant value | Works as expected |
+
+8. I want to have an ability to repeat the program multiple times without re-logging.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Results | Use 'Try again' function | The matrix input function restarts | Works as expected |
+
+9. As a site owner I want the users to have a perfect understanding of what the program do.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Main screen | Show informational messages | Clear description of the program functions | Works as expected |
+| Instructions | Show informational messages | Clear description of how to use the program | Works as expected |
+| Results | Show informational messages | Clear outcome of the user input | Works as expected |
+
+10. I want the login details saved to the spreadsheet.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Create a new user name | Enter a new username | The new user name gets saved on the spreadsheet | Works as expected |
+| Create a new user name | Enter a new password | The new password gets saved on the spreadsheet against the new user name| Works as expected |
+| Create a new user name | Enter a new username and exit the program | The user name without a password gets purged from the spreadsheet | Works as expected |
+
+11. I want the data is correctly validated and the correct results are returned.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Login | Enter the correct username | The correct message is displayed and password is requested | Works as expected |
+| Login | Enter the correct password | Logged in and navigated to the instructions screen | Works as expected |
+| Create a new username | Enter non-existing username | The correct message is displayed and password is requested | Works as expected |
+| Create a new username | Enter a password | The correct navigation options are displayed | Works as expected |
 
 </details>
+
+### Automation Testing
+
+<details><summary>Unit testing</summary>
+
+1. Unit tests were written using 'unittest' library.
+2. Tests are designed to check matrix determinant calculations.
+3. assertEqual() method was used to make sure the results are returned as per input.
+
+</details>
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+| Login and password column headers in the spreadsheet worked as credentials for login | Remove the 'login' and 'password' headers from the spreadsheet |
+| Unable to login if using an existing password | Function that is matching password against the username is amended |
+| Only login is added to the spreadsheet when terminating the program after new user name input | Function added to remove the username if there is no password for it |
+| New login and password were overriding the existing ones | Function that looks for the last empty row in the spreadsheet was fixed |
+|  |  |
