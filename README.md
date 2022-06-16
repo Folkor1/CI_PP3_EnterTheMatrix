@@ -206,6 +206,7 @@ The following flowchart represents the matrix input and calculation program logi
 - 2 options to select from:
   - create username
   - login
+- Covered by user stories 1 and 5
 <details><summary>Show main screen screenshot</summary>
 
 ![Main screen screenshot](assets/docs/Logo.PNG)
@@ -215,6 +216,7 @@ The following flowchart represents the matrix input and calculation program logi
 ### Create a new username
 
 - A new username input is displayed.
+- Covered by user stories 1 and 2
 
 <details><summary>Show new username creation screenshot</summary>
 
@@ -225,6 +227,7 @@ The following flowchart represents the matrix input and calculation program logi
 ### Existing username login
 
 - Existing username input is displayed.
+- Covered by user stories 1 and 3
 
 <details><summary>Show existing username login screenshot</summary>
 
@@ -238,6 +241,7 @@ The following flowchart represents the matrix input and calculation program logi
 - 2 options to select from:
   - start
   - return to the main screen
+- Covered by user story 5
 
 <details><summary>Show instructions screenshot 1</summary>
 
@@ -254,6 +258,7 @@ The following flowchart represents the matrix input and calculation program logi
 ### Enter the numbers
 
 - A message suggesting to enter 2, 3 or 4 numbers is displayed.
+- Covered by user stories 4 and 7
 
 <details><summary>Show enter the number screenshot</summary>
 
@@ -267,6 +272,7 @@ The following flowchart represents the matrix input and calculation program logi
 - 2 options to select from:
   - try again
   - return to the main screen
+- Covered by user stories 5 and 8
 
 <details><summary>Show results screenshot</summary>
 
@@ -277,6 +283,7 @@ The following flowchart represents the matrix input and calculation program logi
 ### User Input Validation
 
 - An error message is displayed when incorrect symbol is entered in 1-2 menu selections.
+- Covered by user stories 4, 5 and 11
 
 <details><summary>Show the error screenshot</summary>
 
