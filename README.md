@@ -138,6 +138,8 @@ The program will ask if the user wishes to run the program again, or return to t
 
 </details>
 
+[Back to Table Of Contents](#table-of-contents)
+
 ## User Stories
 
 ### Users
@@ -156,6 +158,8 @@ The program will ask if the user wishes to run the program again, or return to t
 9. As a site owner, I want the users to have a perfect understanding of what the program does.
 10. I want the login details saved to the spreadsheet.
 11. I want the data to be correctly validated and the correct results are returned.
+
+[Back to Table Of Contents](#table-of-contents)
 
 ## Technical Design
 
@@ -188,6 +192,8 @@ The following flowchart represents the matrix input and calculation program logi
 - [unittest](https://docs.python.org/3/library/unittest.html) to create unit tests for matrix calculations
 - [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) to create json authentification file
 - os - to clear the console
+
+[Back to Table Of Contents](#table-of-contents)
 
 ## Features
 
@@ -304,6 +310,8 @@ The following flowchart represents the matrix input and calculation program logi
 ![Existing username](assets/docs/errorExistUser.PNG)
 
 </details>
+
+[Back to Table Of Contents](#table-of-contents)
 
 ## Validation
 
@@ -612,6 +620,8 @@ The project was tested using 2 methods:
 
 </details>
 
+[Back to Table Of Contents](#table-of-contents)
+
 ## Bugs
 
 | **Bug** | **Fix** |
@@ -649,6 +659,8 @@ The project was deployed using Heroku by the following steps:
 4. Navigate to Git Bash -> working directory
 5. Type 'git clone' and paste the URL received in step 3
 6. Press 'Enter
+
+[Back to Table Of Contents](#table-of-contents)
 
 ## Credits
 
