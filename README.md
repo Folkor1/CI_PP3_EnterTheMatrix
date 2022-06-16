@@ -77,23 +77,23 @@ Options:
 - login
 
 ### Create username
-First the user has an input line to enter a new username. 
+First, the user has an input line to enter a new username. 
 
 Input name:
 - Please type in a new username
 
-If existing username is entered, then the program will notify the user about it and ask to enter another user name, or return to the main screen.
+If an existing username is entered, then the program will notify the user about it and ask to enter another user name, or return to the main screen.
 
 Options:
 - retry new username
 - return to the main screen
 
-Once the user name is created, the program will ask to enter a password. If the program will be terminated at this point, then the username will be purged from the data base on the next run.
+Once the user name is created, the program will ask you to enter a password. If the program is terminated at this point, then the username will be purged from the data base on the next run.
 
 Input password:
 - Please type in a new password
 
-When user name and password are created, the user can either login or return to the main screen.
+When a user name and password are created, the user can either login or return to the main screen.
 
 Options:
 - login
@@ -114,7 +114,7 @@ In case if user name is entered correctly, then the user is asked to type in the
 
 - Type in password
 
-And if the password is entered incorrectly, the user will need to start authentication process from the beginning:
+And if the password is entered incorrectly, the user will need to start the authentication process from the beginning:
 
 - retry login
 - return to the main screen
@@ -126,12 +126,12 @@ When the user successfully logs in, the information window will be displayed wit
 - return to the main screen
 
 ### Start
-Once the program started the user is advised to enter 2, 3 or 4 numbers, separated by comma. If the input is invalid, the corresponding error message will be returned.
+Once the program has started the user is advised to enter 2, 3 or 4 numbers, separated by a comma. If the input is invalid, the corresponding error message will be returned.
 If 2 numbers are entered first, then the program will request another 2 numbers in the next input. As before, in case of incorrect input the error message will be returned. Same for 3 and 4 numbers.
 
 Once the final batch of numbers is entered, the program will process the overall input and return the matrix and calculate its determinant using the corresponding math formulas.
 
-The the program will ask if user wishes to run the program again, or return to the main screen:
+The program will ask if the user wishes to run the program again, or return to the main screen:
 
 - try again
 - return to the main screen
@@ -143,19 +143,19 @@ The the program will ask if user wishes to run the program again, or return to t
 ### Users
 
 1. As a user I want to select to create a new user name or use the existing.
-2. I want to have a functionality to create a new user name and password.
-3. I want to have an ability to use existing user name and password.
-4. I want to have a clear undestanding of what went wrong in the case of error.
+2. I want to have functionality to create a new user name and password.
+3. I want to have the ability to use existing user name and password.
+4. I want to have a clear understanding of what went wrong in the case of error.
 5. I want to have understandable, non-bulky instructions of use.
-6. I want to be able to easily navigate from any point of the program to the main screen.
+6. I want to be able to easily navigate from any point in the program to the main screen.
 7. I want to run the program and get the correct results based on my input.
-8. I want to have an ability to repeat the program multiple times without re-logging.
+8. I want to have the ability to repeat the program multiple times without re-logging.
 
 ### Site Owner
 
-9. As a site owner I want the users to have a perfect understanding of what the program do.
+9. As a site owner, I want the users to have a perfect understanding of what the program does.
 10. I want the login details saved to the spreadsheet.
-11. I want the data is correctly validated and the correct results are returned.
+11. I want the data to be correctly validated and the correct results are returned.
 
 ## Technical Design
 
@@ -225,7 +225,7 @@ The following flowchart represents the matrix input and calculation program logi
 
 ### Instructions
 
-- Instructions of how to use the program are displayed.
+- Instructions on how to use the program are displayed.
 - 2 options to select from:
   - start
   - return to the main screen
@@ -297,7 +297,7 @@ The following flowchart represents the matrix input and calculation program logi
 
 </details>
 
-- Another error message is displayed when using existing username on username creation.
+- Another error message is displayed when using an existing username on username creation.
 
 <details><summary>Show the error screenshot</summary>
 
@@ -307,7 +307,7 @@ The following flowchart represents the matrix input and calculation program logi
 
 ## Validation
 
-[PEP8 online](http://pep8online.com/) was used to check the code for errors. Code passed the validation in all files.
+[PEP8 online](http://pep8online.com/) was used to check the code for errors. Code passed validation in all files.
 
 <details><summary>run.ry validation</summary>
 
@@ -363,7 +363,7 @@ The project was tested using 2 methods:
 
 </details>
 
-2. I want to have a functionality to create a new user name and password.
+2. I want to have functionality to create a new user name and password.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
@@ -397,7 +397,7 @@ The project was tested using 2 methods:
 
 </details>
 
-3. I want to have an ability to use existing user name and password.
+3. I want to have the ability to use existing user name and password.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
@@ -430,7 +430,7 @@ The project was tested using 2 methods:
 
 </details>
 
-4. I want to have a clear undestanding of what went wrong in the case of error.
+4. I want to have a clear understanding of what went wrong in the case of error.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
@@ -475,13 +475,13 @@ The project was tested using 2 methods:
 
 </details>
 
-6. I want to be able to easily navigate from any point of the program to the main screen.
+6. I want to be able to easily navigate from any point in the program to the main screen.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Incorrect user name | Enter an incorrect username | There is an option to navigate to the main screen | Works as expected |
 | Incorrect password | Enter an incorrect password | There is an option to navigate to the main screen | Works as expected |
-| Intructions | Navigate to instructions screen | There is an option to navigate to the main screen | Works as expected |
+| Instructions | Navigate to instructions screen | There is an option to navigate to the main screen | Works as expected |
 | Results | Run the program and get to results screen | There is an option to navigate to the main screen | Works as expected |
 
 <details><summary>Screenshot 1</summary>
@@ -539,7 +539,7 @@ The project was tested using 2 methods:
 
 </details>
 
-9. As a site owner I want the users to have a perfect understanding of what the program do.
+9. As a site owner, I want the users to have a perfect understanding of what the program do.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
@@ -573,12 +573,12 @@ The project was tested using 2 methods:
 | Create a new user name | Enter a new password | The new password gets saved on the spreadsheet against the new user name| Works as expected |
 | Create a new user name | Enter a new username and exit the program | The user name without a password gets purged from the spreadsheet | Works as expected |
 
-11. I want the data is correctly validated and the correct results are returned.
+11. I want the data to be correctly validated and the correct results are returned.
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Login | Enter the correct username | The correct message is displayed and password is requested | Works as expected |
-| Login | Enter the correct password | Logged in and navigated to the instructions screen | Works as expected |
+| Login | Enter the correct password | Log in and navigate to the instructions screen | Works as expected |
 | Create a new username | Enter non-existing username | The correct message is displayed and password is requested | Works as expected |
 | Create a new username | Enter a password | The correct navigation options are displayed | Works as expected |
 
@@ -617,9 +617,9 @@ The project was tested using 2 methods:
 | **Bug** | **Fix** |
 | ------- | ------- |
 | Login and password column headers in the spreadsheet worked as credentials for login | Remove the 'login' and 'password' headers from the spreadsheet |
-| Unable to login if using an existing password | Function that is matching password against the username is amended |
+| Unable to login if using an existing password | Function that matches password against the username is amended |
 | Only login is added to the spreadsheet when terminating the program after new user name input | Function added to remove the username if there is no password for it |
-| New login and password were overriding the existing ones | Function that looks for the last empty row in the spreadsheet was fixed |
+| New login and password overriding the existing ones | Function that looks for the last empty row in the spreadsheet was fixed |
 | Unexpected square brackets displayed in the matrix output | Added replace() method to the matrix output function |
 | Text issues decreasing readability | Line breaks added and removed overflowing equal signs |
 
@@ -647,7 +647,7 @@ The project was deployed using Heroku by the following steps:
 2. Click the 'Code' button (next to the green 'Gitpod' button)
 3. Copy the HTTPS link
 4. Navigate to Git Bash -> working directory
-5. Type 'git clone' and paste the URL received in the step 3
+5. Type 'git clone' and paste the URL received in step 3
 6. Press 'Enter
 
 ## Credits
